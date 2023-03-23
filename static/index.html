@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rocket Rooms</title>
+   <link href="/output.css" rel="stylesheet">
+    <script src="/script.js" charset="utf-8" defer></script>
+  </head>
+  <body class="bg-blue-200 text-slate-50 flex h-screen w-screen justify-center items-center ">
+    <main class="w-[50%] h-[50%] rounded-lg shadow-lg bg-blue-600 p-5 flex flex-col items-center justify-center gap-5">
+      <div id="sidebar">
+        <div id="status" class="pending"></div>
+
+        <div id="room-list">
+          <template id="room">
+            <button class="px-2 h-10 hover:brightness-105 bg-slate-900 text-center"></button>
+          </template>
+        </div>
+
+        <form id="new-room">
+          <input class="h-10 bg-slate-400 rounded-md p-1" type="text" name="name" id="name" autocomplete="off"
+              placeholder="new room..." maxlength="29"></input>
+          <button class="px-2 h-10 hover:brightness-105 bg-slate-900 text-center" type="submit">+</button>
+        </form>
+      </div>
+
+      <div class="flex flex-col " id="content">
+
+        <div class="bg-slate-50 w-full h-20 text-black" id="messages">
+          <template id="message">
+            <div class="message">
+              <span class="username"></span>
+              <span class="text"></span>
+            </div>
+          </template>
+        </div>
+
+        <form id="new-message">
+          <input class="h-10 bg-slate-400 rounded-md p-1" type="text" name="username" id="username" maxlength="19"
+            placeholder="guest" autocomplete="off">
+          <input class="h-10 bg-slate-400 rounded-md p-1" type="text" name="message" id="message" autocomplete="off"
+              placeholder="Send a message..." autofocus>
+          <button class="px-2 h-10 hover:brightness-105 bg-slate-900 text-center" type="submit" id="send">Send</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
